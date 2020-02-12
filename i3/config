@@ -14,7 +14,6 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
-
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -27,6 +26,7 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+bindsym $mod+q split toggle
 # split in horizontal orientation
 bindsym $mod+h split h
 
@@ -80,12 +80,21 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+exec --no-startup-id i3-msg 'workspace 7; exec outlook'
+exec --no-startup-id i3-msg 'workspace 7; exec teams'
+exec --no-startup-id i3-msg 'workspace 7; exec telegram-desktop'
+exec --no-startup-id i3-msg 'workspace 7; exec whatsapp'
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# Screenshots
+bindsym Print --release exec "scrot '%Y-%m-%d_%H:%M:%S.png' -e 'mv $f ~/scrot/'i"
+bindsym Shift+Print --release exec "scrot -s '%Y-%m-%d_%H:%M:%S.png' -e 'mv $f ~/scrot/'"
+
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

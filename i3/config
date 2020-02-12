@@ -7,6 +7,11 @@ exec --no-startup-id nm-applet --sm-disable
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+# Audio controls
+bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
+bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
+bindsym XF86AudioMute exec "amixer -q set Master toggle && amixer -q set Headphone unmute && amixer -q set Speaker unmute"
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -84,6 +89,8 @@ exec --no-startup-id i3-msg 'workspace 7; exec outlook'
 exec --no-startup-id i3-msg 'workspace 7; exec teams'
 exec --no-startup-id i3-msg 'workspace 7; exec telegram-desktop'
 exec --no-startup-id i3-msg 'workspace 7; exec whatsapp'
+
+for_window [class="Spotify"] move container to workspace 8
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

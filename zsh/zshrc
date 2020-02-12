@@ -3,6 +3,6 @@
 # confirmations, etc.) must go above this block, everything else may go below.
 export ZSH="/home/dcorral/.oh-my-zsh"
 ZSH_THEME="agnoster"
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting wd)
+plugins=(sudo copyfile git zsh-autosuggestions zsh-syntax-highlighting wd)
 source $ZSH/oh-my-zsh.sh
 

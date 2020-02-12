@@ -11,6 +11,13 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
 bindsym XF86AudioMute exec "amixer -q set Master toggle && amixer -q set Headphone unmute && amixer -q set Speaker unmute"
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioStop exec playerctl stop
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+# Lock
+bindsym $mod+l exec i3lock
 
 # kill focused window
 bindsym $mod+Shift+q kill

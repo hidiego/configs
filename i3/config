@@ -4,6 +4,7 @@ floating_modifier $mod
 
 focus_follows_mouse no
 exec --no-startup-id nm-applet --sm-disable
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
@@ -12,7 +13,6 @@ bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
 bindsym XF86AudioMute exec "amixer -q set Master toggle && amixer -q set Headphone unmute && amixer -q set Speaker unmute"
 bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioStop exec playerctl stop
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
@@ -39,6 +39,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 bindsym $mod+q split toggle
+
 # split in horizontal orientation
 bindsym $mod+h split h
 
@@ -96,15 +97,21 @@ exec --no-startup-id i3-msg 'workspace 7; exec outlook'
 exec --no-startup-id i3-msg 'workspace 7; exec teams'
 exec --no-startup-id i3-msg 'workspace 7; exec telegram-desktop'
 exec --no-startup-id i3-msg 'workspace 7; exec whatsapp'
-
 for_window [class="Spotify"] move container to workspace 8
+
+# custom bindings
+bindsym $mod+F3 exec chromium-browser
+bindsym $mod+F2 exec nautilus
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
 # Screenshots
 bindsym Print --release exec "scrot '%Y-%m-%d_%H:%M:%S.png' -e 'mv $f ~/scrot/'i"
 bindsym Shift+Print --release exec "scrot -s '%Y-%m-%d_%H:%M:%S.png' -e 'mv $f ~/scrot/'"

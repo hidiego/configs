@@ -4,6 +4,7 @@
 export ZSH="/home/dcorral/.oh-my-zsh"
 ZSH_THEME="agnoster"
 plugins=(
+	extract
 	wd
 	docker
 	docker-compose

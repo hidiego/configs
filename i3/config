@@ -4,6 +4,7 @@ floating_modifier $mod
 
 focus_follows_mouse no
 exec --no-startup-id nm-applet --sm-disable
+exec --no-startup-id ckb-next --background
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -17,7 +18,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Lock
-bindsym $mod+l exec i3lock
+bindsym $mod+l exec custom-i3Lock
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -97,6 +98,10 @@ exec --no-startup-id i3-msg 'workspace 7; exec outlook'
 exec --no-startup-id i3-msg 'workspace 7; exec teams'
 exec --no-startup-id i3-msg 'workspace 7; exec telegram-desktop'
 exec --no-startup-id i3-msg 'workspace 7; exec whatsapp'
+exec --no-startup-id i3-msg 'workspace 3; exec i3-sensible-terminal'
+exec --no-startup-id i3-msg 'workspace 2; exec code'
+exec --no-startup-id i3-msg 'workspace 1; exec chromium-browser'
+
 for_window [class="Spotify"] move container to workspace 8
 
 # custom bindings

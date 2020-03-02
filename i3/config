@@ -98,9 +98,9 @@ exec --no-startup-id i3-msg 'workspace 7; exec outlook'
 exec --no-startup-id i3-msg 'workspace 7; exec teams'
 exec --no-startup-id i3-msg 'workspace 7; exec telegram-desktop'
 exec --no-startup-id i3-msg 'workspace 7; exec whatsapp'
-exec --no-startup-id i3-msg 'workspace 3; exec i3-sensible-terminal'
-exec --no-startup-id i3-msg 'workspace 2; exec code'
-exec --no-startup-id i3-msg 'workspace 1; exec chromium-browser'
+# exec --no-startup-id i3-msg 'workspace 3; exec i3-sensible-terminal'
+# exec --no-startup-id i3-msg 'workspace 2; exec code'
+# exec --no-startup-id i3-msg 'workspace 1; exec chromium-browser'
 
 for_window [class="Spotify"] move container to workspace 8
 

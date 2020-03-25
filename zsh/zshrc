@@ -4,6 +4,8 @@
 export ZSH="/home/dcorral/.oh-my-zsh"
 ZSH_THEME="agnoster"
 plugins=(
+	web-search
+	copyfile
 	extract
 	wd
 	docker
